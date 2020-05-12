@@ -94,8 +94,8 @@ search$
 totalResults$
     .pipe(tap(val => (elements.totalResults.innerHTML = val.toString())))
     .subscribe();
-totalPages$.subscribe(pages => (elements.totalPages.innerHTML = pages));
-userPage$.subscribe(page => {
+totalPages$.subscribe((pages: any) => (elements.totalPages.innerHTML = pages));
+userPage$.subscribe((page: any) => {
     elements.pageNum.innerHTML = page;
 });
 
